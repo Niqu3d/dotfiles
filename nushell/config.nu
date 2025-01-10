@@ -1,0 +1,1 @@
+/home/niqu3d/.config/nushell/config.nu
