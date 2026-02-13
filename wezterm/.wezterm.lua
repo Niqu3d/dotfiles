@@ -75,7 +75,6 @@ config.keys = {
 
       window:perform_action(
         wezterm.action.SpawnCommandInNewTab {
-          -- The bash wrapper keeps the window open so you can see if SSH fails
           args = { "ssh", "-t", target_ip, remote_script },
         },
         pane
