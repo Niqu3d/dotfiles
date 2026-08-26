@@ -97,6 +97,5 @@ $env.NU_PLUGIN_DIRS = [
 # $env.PATH = ($env.PATH | uniq)
 
 # To load from a custom file you can use:
-# source ($nu.default-config-dir | path join 'custom.nu')
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
