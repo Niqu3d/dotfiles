@@ -334,6 +334,30 @@ $env.config = {
     ]
 
 keybindings: [
+	{
+            name: completion_menu
+            modifier: none
+            keycode: tab
+            mode: [emacs, vi_normal, vi_insert]
+            event: {
+                until: [
+                    { send: menu name: completion_menu }
+                    { send: menunext }
+                    { edit: complete }
+                ]
+            }
+        }
+        {
+            name: completion_previous_menu
+            modifier: shift
+            keycode: backtab
+            mode: [emacs, vi_normal, vi_insert]
+            event: { send: menuprevious }
+        }
+
+
+
+
         {
             name: move_to_line_start
             modifier: none

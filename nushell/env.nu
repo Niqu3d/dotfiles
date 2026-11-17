@@ -99,3 +99,5 @@ $env.NU_PLUGIN_DIRS = [
 # To load from a custom file you can use:
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+$env.PATH = ($env.PATH | prepend $'($nu.home-dir)/.local/bin')
